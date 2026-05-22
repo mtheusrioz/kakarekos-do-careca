@@ -1,0 +1,11 @@
+Imagens do site (copie para esta pasta):
+
+  vinyl-record.png
+  hero-bg.jpg
+  product-solution.jpg
+  product-brush.jpg
+  product-kit.jpg
+
+No projeto React elas ficam em: src/assets/
+
+Se você gerou o site no Lovable, exporte ou copie esses arquivos da pasta de assets do projeto original.
