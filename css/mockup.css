@@ -747,6 +747,273 @@ body.menu-open {
 .dif-card-mock.bg-7::before { background-image: url(../assets/diferenciais/07.jpg); }
 .dif-card-mock.bg-8::before { background-image: url(../assets/diferenciais/08.jpg); }
 
+/* ── Guia — método em 5 etapas ── */
+.guia-mock {
+  width: 100%;
+  max-width: 100%;
+  padding: 4rem 0;
+  border-top: 1px solid color-mix(in oklab, var(--gold) 10%, transparent);
+  overflow: hidden;
+}
+
+.guia-mock-inner {
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.guia-mock-head {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-right: 0;
+}
+
+.guia-mock-head .label {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.guia-mock-head h2 {
+  margin-top: 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 5.5vw, 2.65rem);
+  font-weight: 500;
+  line-height: 1.15;
+  max-width: 20rem;
+}
+
+.guia-mock-head h2 .gold { color: var(--gold); }
+.guia-mock-head h2 .italic { font-style: italic; }
+
+.guia-intro {
+  margin-top: 1rem;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--muted-foreground);
+  max-width: 22rem;
+}
+
+.guia-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.guia-step {
+  display: grid;
+  grid-template-columns: auto auto auto 1fr;
+  align-items: start;
+  gap: 0.85rem 1rem;
+  padding: 1.25rem 1.15rem;
+  border: 1px solid color-mix(in oklab, var(--gold) 28%, transparent);
+  border-radius: 0.4rem;
+  background: color-mix(in oklab, var(--card) 40%, transparent);
+}
+
+.guia-step-num {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--gold);
+  padding-top: 0.15rem;
+}
+
+.guia-step-divider {
+  width: 1px;
+  align-self: stretch;
+  min-height: 3.5rem;
+  background: color-mix(in oklab, var(--gold) 25%, transparent);
+}
+
+.guia-step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  border: 1px solid color-mix(in oklab, var(--gold) 35%, transparent);
+  border-radius: 50%;
+  color: var(--gold);
+}
+
+.guia-step-icon .icon {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.guia-step-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.guia-step-body p {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--muted-foreground);
+}
+
+.guia-step-body p .gold {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.guia-summary {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 1.25rem;
+  padding: 1.35rem 1.15rem;
+  border: 1px solid color-mix(in oklab, var(--gold) 28%, transparent);
+  border-radius: 0.4rem;
+  background: color-mix(in oklab, var(--gold) 4%, transparent);
+}
+
+.guia-summary-icon {
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in oklab, var(--gold) 35%, transparent);
+  border-radius: 50%;
+  color: var(--gold);
+}
+
+.guia-summary p {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--muted-foreground);
+}
+
+.guia-summary p .gold {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.guia-cta-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.guia-cta-row .btn-wa-full,
+.guia-cta-row .btn-kits-full {
+  margin-bottom: 0;
+}
+
+@media (min-width: 640px) {
+  .guia-cta-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .guia-mock-inner {
+    max-width: 52rem;
+  }
+
+  .guia-mock-head h2 {
+    max-width: 28rem;
+  }
+
+  .guia-intro {
+    max-width: 32rem;
+    font-size: 1.05rem;
+  }
+
+  .guia-step {
+    padding: 1.5rem 1.5rem;
+    gap: 1rem 1.25rem;
+  }
+
+  .guia-step-num {
+    font-size: 2rem;
+  }
+
+  .guia-step-body h3 {
+    font-size: 1.15rem;
+  }
+
+  .guia-step-body p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .guia-mock {
+    padding: 5.5rem 0;
+  }
+
+  .guia-mock-inner {
+    max-width: 56rem;
+  }
+
+  .guia-mock-head {
+    margin-bottom: 3rem;
+  }
+
+  .guia-mock-head h2 {
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    max-width: none;
+  }
+
+  .guia-step {
+    padding: 1.75rem 2rem;
+  }
+
+  .guia-step-num {
+    font-size: 2.25rem;
+  }
+
+  .guia-step-icon {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+
+  .guia-step-icon .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .guia-summary {
+    padding: 1.75rem 2rem;
+  }
+
+  .guia-summary p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .guia-mock {
+    padding: 3.5rem 0;
+  }
+
+  .guia-mock-head h2 {
+    max-width: none;
+    font-size: clamp(1.75rem, 7.5vw, 2.35rem);
+  }
+
+  .guia-intro {
+    max-width: none;
+    font-size: 1.05rem;
+  }
+}
+
 /* ── Tablet ── */
 @media (min-width: 640px) {
   .trust-box { grid-template-columns: repeat(3, 1fr); }
