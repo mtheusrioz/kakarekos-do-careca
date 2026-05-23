@@ -43,6 +43,7 @@
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#diferenciais">Diferenciais</a></li>
           <li><a href="#guia">Guia</a></li>
+          <li><a href="#kits">Kits</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
         <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
@@ -54,6 +55,7 @@
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#diferenciais">Diferenciais</a></li>
         <li><a href="#guia">Guia</a></li>
+        <li><a href="#kits">Kits</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </header>
@@ -115,7 +117,7 @@
               <span class="btn-inner"><svg class="icon icon-5" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Falar no WhatsApp</span>
               <span aria-hidden="true">→</span>
             </a>
-            <a class="btn-kits-full" href="#diferenciais">
+            <a class="btn-kits-full" href="#kits">
               <span class="btn-inner"><svg class="icon icon-5" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Conhecer os kits</span>
               <span aria-hidden="true">→</span>
             </a>
@@ -201,7 +203,7 @@
                 <span class="btn-inner"><svg class="icon icon-5" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Falar no WhatsApp</span>
                 <span aria-hidden="true">→</span>
               </a>
-              <a class="btn-kits-full" href="#diferenciais">
+              <a class="btn-kits-full" href="#kits">
                 <span class="btn-inner"><svg class="icon icon-5" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg> Conhecer os kits</span>
                 <span aria-hidden="true">→</span>
               </a>
@@ -266,7 +268,7 @@
                 <span class="btn-inner"><svg class="icon icon-5" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Falar no WhatsApp</span>
                 <span aria-hidden="true">→</span>
               </a>
-              <a class="btn-kits-full" href="#diferenciais">
+              <a class="btn-kits-full" href="#kits">
                 <span class="btn-inner"><svg class="icon icon-5" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg> Conhecer os kits</span>
                 <span aria-hidden="true">→</span>
               </a>
@@ -355,10 +357,90 @@
               <span class="btn-inner"><svg class="icon icon-5" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Falar no WhatsApp</span>
               <span aria-hidden="true">→</span>
             </a>
-            <a class="btn-kits-full" href="#diferenciais">
+            <a class="btn-kits-full" href="#kits">
               <span class="btn-inner"><svg class="icon icon-5" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Conhecer os kits</span>
               <span aria-hidden="true">→</span>
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="kits" class="kits-showcase grain">
+        <div class="kits-showcase-inner px-4 md:px-6">
+          <div class="kits-showcase-head">
+            <p class="label">— Nossos kits</p>
+            <h2>Encontre o kit ideal para <span class="gold italic">sua coleção</span>.</h2>
+          </div>
+
+          <div class="kits-tabs" role="tablist" aria-label="Tipos de kit">
+            <button type="button" class="kits-tab is-active" role="tab" id="kit-tab-essencial" aria-selected="true" aria-controls="kit-panel-essencial" data-kit-tab="essencial">Kit Essencial</button>
+            <button type="button" class="kits-tab" role="tab" id="kit-tab-avancado" aria-selected="false" aria-controls="kit-panel-avancado" data-kit-tab="avancado" tabindex="-1">Kit Avançado</button>
+            <button type="button" class="kits-tab" role="tab" id="kit-tab-premium" aria-selected="false" aria-controls="kit-panel-premium" data-kit-tab="premium" tabindex="-1">Kit Premium</button>
+          </div>
+
+          <div class="kits-panels">
+            <article class="kits-panel is-active" id="kit-panel-essencial" role="tabpanel" aria-labelledby="kit-tab-essencial" data-kit-panel="essencial">
+              <div class="kits-card">
+                <div class="kits-card-media">
+                  <img src="assets/kit.jpeg" alt="Kit Essencial Kakarekos do Careca" width="800" height="600" loading="lazy" />
+                </div>
+                <div class="kits-card-body">
+                  <h3>Kit Essencial</h3>
+                  <div class="kits-card-text">
+                    <p>O Kit Essencial reúne os principais itens para uma limpeza técnica, segura e prática dos discos e da agulha no dia a dia.</p>
+                    <p>Ele acompanha o <span class="gold">Clean Pro 150 ml</span>, limpador de agulha <span class="gold">Needle Care 60 ml</span>, flanela de aplicação e pincel para limpeza da agulha, oferecendo um processo completo de manutenção básica da coleção.</p>
+                    <p>O Clean Pro atua na remoção de poeira, biofilme e resíduos aderidos nos sulcos, enquanto o Needle Care auxilia na limpeza da agulha, ajudando no melhor rastreamento e preservação do conjunto de reprodução.</p>
+                    <p>É a escolha ideal para quem deseja manter os discos sempre limpos, reduzir o acúmulo de sujeira ao longo do tempo e cuidar corretamente do setup de reprodução.</p>
+                  </div>
+                  <a class="btn-wa-full" data-wa="Olá! Tenho interesse no Kit Essencial da Kakarekos do Careca." target="_blank" rel="noreferrer">
+                    <span class="btn-inner"><svg class="icon icon-5" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Falar no WhatsApp</span>
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="kits-panel" id="kit-panel-avancado" role="tabpanel" aria-labelledby="kit-tab-avancado" data-kit-panel="avancado" hidden>
+              <div class="kits-card">
+                <div class="kits-card-media">
+                  <img src="assets/kitavancado.jpeg" alt="Kit Avançado Kakarekos do Careca" width="800" height="600" loading="lazy" />
+                </div>
+                <div class="kits-card-body">
+                  <h3>Kit Avançado</h3>
+                  <div class="kits-card-text">
+                    <p>O Kit Avançado foi desenvolvido para quem deseja ir além da limpeza convencional e entrar em um processo mais completo de conservação fonográfica.</p>
+                    <p>Além do <span class="gold">Clean Pro 150 ml</span> e do <span class="gold">Needle Care 60 ml</span>, o kit acompanha o <span class="gold">Enxágue Anti Resíduos</span>, flanelas dedicadas para cada etapa da limpeza e uma flanela premium para cuidados externos do setup e das capas.</p>
+                    <p>O diferencial do processo está justamente na etapa de finalização técnica com o enxágue, ajudando na remoção de resíduos suspensos durante a limpeza e entregando um acabamento mais refinado para armazenamento e reprodução.</p>
+                    <p>É a escolha ideal para colecionadores que buscam uma limpeza mais profunda, maior cuidado a longo prazo e um processo mais técnico de preservação dos discos e da agulha.</p>
+                  </div>
+                  <a class="btn-wa-full" data-wa="Olá! Tenho interesse no Kit Avançado da Kakarekos do Careca." target="_blank" rel="noreferrer">
+                    <span class="btn-inner"><svg class="icon icon-5" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Falar no WhatsApp</span>
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="kits-panel" id="kit-panel-premium" role="tabpanel" aria-labelledby="kit-tab-premium" data-kit-panel="premium" hidden>
+              <div class="kits-card">
+                <div class="kits-card-media">
+                  <img src="assets/kitpremium.jpeg" alt="Kit Premium Kakarekos do Careca" width="800" height="600" loading="lazy" />
+                </div>
+                <div class="kits-card-body">
+                  <h3>Kit Premium</h3>
+                  <div class="kits-card-text">
+                    <p>O Kit Premium reúne o processo mais completo de limpeza e conservação da linha Kakarekos, pensado para colecionadores que desejam máxima eficiência, praticidade e cuidado no tratamento do acervo.</p>
+                    <p>Além do <span class="gold">Clean Pro 150 ml</span>, <span class="gold">Needle Care 60 ml</span> e <span class="gold">Enxágue Anti Resíduos</span>, o kit acompanha flanelas dedicadas para cada etapa do processo, flanela premium para superfícies externas, flanela de apoio para limpeza segura do disco e acessórios voltados para uma manutenção mais técnica e organizada.</p>
+                    <p>O diferencial do Premium está na experiência completa de conservação, permitindo desde a remoção da sujeira superficial até a finalização técnica dos sulcos, reduzindo o acúmulo de resíduos ao longo do tempo e proporcionando um processo mais refinado de preservação fonográfica.</p>
+                    <p>É a escolha ideal para quem possui um acervo maior, discos mais sensíveis ou simplesmente deseja elevar o nível do ritual de limpeza e conservação do setup.</p>
+                  </div>
+                  <a class="btn-wa-full" data-wa="Olá! Tenho interesse no Kit Premium da Kakarekos do Careca." target="_blank" rel="noreferrer">
+                    <span class="btn-inner"><svg class="icon icon-5" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Falar no WhatsApp</span>
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>

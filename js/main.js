@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "5511999999999";
+const WHATSAPP_NUMBER = "558588692112";
 
 function waLink(msg) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
@@ -70,5 +70,31 @@ if (menuToggle && navMobile) {
     if (e.key === "Escape" && navMobile.classList.contains("is-open")) {
       setMenuOpen(false);
     }
+  });
+}
+
+const kitsRoot = document.getElementById("kits");
+if (kitsRoot) {
+  const kitTabs = kitsRoot.querySelectorAll("[data-kit-tab]");
+  const kitPanels = kitsRoot.querySelectorAll("[data-kit-panel]");
+
+  kitTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const target = tab.getAttribute("data-kit-tab");
+      if (!target) return;
+
+      kitTabs.forEach((t) => {
+        const active = t === tab;
+        t.classList.toggle("is-active", active);
+        t.setAttribute("aria-selected", active ? "true" : "false");
+        t.tabIndex = active ? 0 : -1;
+      });
+
+      kitPanels.forEach((panel) => {
+        const active = panel.getAttribute("data-kit-panel") === target;
+        panel.classList.toggle("is-active", active);
+        panel.hidden = !active;
+      });
+    });
   });
 }
