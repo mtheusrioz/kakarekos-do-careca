@@ -31,3 +31,44 @@ const waFloat = document.getElementById("wa-float");
 if (waFloat) {
   setTimeout(() => waFloat.classList.add("is-visible"), 800);
 }
+
+const menuToggle = document.getElementById("menu-toggle");
+const navMobile = document.getElementById("nav-mobile");
+const navBackdrop = document.getElementById("nav-backdrop");
+
+function setMenuOpen(open) {
+  if (!menuToggle || !navMobile) return;
+
+  navMobile.classList.toggle("is-open", open);
+  menuToggle.classList.toggle("is-open", open);
+  menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  menuToggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+  navMobile.setAttribute("aria-hidden", open ? "false" : "true");
+  document.body.classList.toggle("menu-open", open);
+
+  if (navBackdrop) {
+    navBackdrop.classList.toggle("is-visible", open);
+    navBackdrop.hidden = !open;
+    navBackdrop.tabIndex = open ? 0 : -1;
+  }
+}
+
+if (menuToggle && navMobile) {
+  menuToggle.addEventListener("click", () => {
+    setMenuOpen(!navMobile.classList.contains("is-open"));
+  });
+
+  navMobile.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener("click", () => setMenuOpen(false));
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && navMobile.classList.contains("is-open")) {
+      setMenuOpen(false);
+    }
+  });
+}
