@@ -1,12 +1,18 @@
-const WHATSAPP_NUMBER = "558588692112";
+const WHATSAPP_NUMBERS = {
+  primary: "558588692112",
+  secondary: "558591493869",
+};
 
-function waLink(msg) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+const DEFAULT_WA_MSG = "Olá! Vim pelo site e quero falar sobre os produtos.";
+
+function waLink(msg, number = WHATSAPP_NUMBERS.primary) {
+  return `https://wa.me/${number}?text=${encodeURIComponent(msg)}`;
 }
 
 document.querySelectorAll("[data-wa]").forEach((el) => {
-  const msg = el.getAttribute("data-wa");
-  if (msg) el.href = waLink(msg);
+  const msg = el.getAttribute("data-wa") || DEFAULT_WA_MSG;
+  const number = el.getAttribute("data-wa-number") || WHATSAPP_NUMBERS.primary;
+  el.href = waLink(msg, number);
 });
 
 const yearEl = document.getElementById("footer-year");

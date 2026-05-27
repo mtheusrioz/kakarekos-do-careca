@@ -19,7 +19,7 @@ npx serve .
 
 ## WhatsApp
 
-Edite o número em `js/main.js` (`WHATSAPP_NUMBER`).
+Edite os números em `js/main.js` (`WHATSAPP_NUMBERS.primary` e `.secondary`). Links com `data-wa-number` usam um número específico; os demais usam o primário.
 
 ## GitHub Pages
 
