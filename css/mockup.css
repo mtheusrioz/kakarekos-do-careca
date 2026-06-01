@@ -458,6 +458,13 @@ body.menu-open {
   text-decoration: none;
   transition: box-shadow 0.2s ease, background-color 0.2s ease;
   margin-bottom: 0.75rem;
+  cursor: pointer;
+}
+
+button.btn-wa-full,
+button.btn-kits-full {
+  border: none;
+  text-align: left;
 }
 
 .btn-wa-full {
@@ -771,14 +778,16 @@ body.menu-open {
 
 .dif-card-mock p .gold { color: var(--gold); font-weight: 500; }
 
-.dif-card-mock.bg-1::before { background-image: url(../assets/diferenciais/01.jpg); }
+/* bg-1 Sulcos livres · bg-2 Sem detergentes · bg-3 Estática · bg-4 Agulha */
+/* bg-5 Processo seguro · bg-6 Colecionadores · bg-7 Testado · bg-8 Suporte */
+.dif-card-mock.bg-1::before { background-image: url(../assets/2.jpeg); }
 .dif-card-mock.bg-2::before { background-image: url(../assets/product-solution.jpg); }
-.dif-card-mock.bg-3::before { background-image: url(../assets/diferenciais/03.jpg); }
-.dif-card-mock.bg-4::before { background-image: url(../assets/diferenciais/04.jpg); }
-.dif-card-mock.bg-5::before { background-image: url(../assets/diferenciais/05.jpg); }
-.dif-card-mock.bg-6::before { background-image: url(../assets/diferenciais/06.jpg); }
-.dif-card-mock.bg-7::before { background-image: url(../assets/diferenciais/07.jpg); }
-.dif-card-mock.bg-8::before { background-image: url(../assets/diferenciais/08.jpg); }
+.dif-card-mock.bg-3::before { background-image: url(../assets/product-brush.jpg); }
+.dif-card-mock.bg-4::before { background-image: url(../assets/1.jpeg); }
+.dif-card-mock.bg-5::before { background-image: url(../assets/product-kit.jpg); }
+.dif-card-mock.bg-6::before { background-image: url(../assets/hero-bg.jpg); }
+.dif-card-mock.bg-7::before { background-image: url(../assets/diferenciais/03.jpg); }
+.dif-card-mock.bg-8::before { background-image: url(../assets/3.jpeg); }
 
 /* ── Guia — método em 5 etapas ── */
 .guia-mock {
@@ -1942,4 +1951,146 @@ body.menu-open {
 @media (max-width: 767px) {
   .pillar-cell:nth-child(2n) { border-right: none; }
   .pillar-cell:nth-child(n+3) { border-bottom: none; }
+}
+
+/* ── Parceiros (marquee infinito) ── */
+.partners-section {
+  overflow: hidden;
+}
+
+.partners-header {
+  width: 100%;
+  max-width: none;
+  margin-bottom: 5rem;
+  padding-inline: 0;
+}
+
+.partners-header h2 {
+  max-width: none;
+  margin-inline: auto;
+  line-height: 1.1;
+}
+
+.partners-marquee {
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+}
+
+.partners-marquee-viewport {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.partners-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: partners-marquee-scroll 70s linear infinite;
+}
+
+.partners-marquee:hover .partners-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes partners-marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.partners-marquee-group {
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.partners-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.15rem;
+  flex-shrink: 0;
+  width: 14rem;
+  margin: 0 2.75rem;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.partners-logo {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+  opacity: 0.5;
+  filter: grayscale(100%) brightness(0.82) saturate(0.4);
+  will-change: opacity, filter;
+}
+
+.partners-visit-link {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: color-mix(in oklab, var(--muted-foreground) 85%, var(--gold));
+  background: none;
+  border: none;
+  padding: 0;
+  transition: color 0.25s ease;
+}
+
+.partners-visit-link:hover {
+  color: var(--gold);
+}
+
+@media (min-width: 768px) {
+  .partners-header {
+    max-width: 42rem;
+    margin-bottom: 5.5rem;
+  }
+
+  .partners-item {
+    width: 16rem;
+    margin: 0 3.5rem;
+  }
+
+  .partners-logo {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partners-marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 48rem;
+    margin: 0 auto;
+    gap: 2rem 0;
+  }
+
+  .partners-marquee-group[aria-hidden="true"] {
+    display: none;
+  }
+
+  .partners-marquee-viewport {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
 }
